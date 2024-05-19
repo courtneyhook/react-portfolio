@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 function Nav() {
   const currentPage = useLocation().pathname;
@@ -7,42 +7,42 @@ function Nav() {
     <>
       <ul>
         <li className="nav-list color-1">
-          <Link
+          <NavLink
             to="/"
             className={currentPage === "/" ? "nav-link active" : "nav-link"}
           >
             About Me
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-list color-2">
-          <Link
+          <NavLink
             to="/contact"
             className={
               currentPage === "/contact" ? "nav-link active" : "nav-link"
             }
           >
             Contact
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-list color-3">
-          <Link
+          <NavLink
             to="/portfolio"
             className={
               currentPage === "/portfolio" ? "nav-link active" : "nav-link"
             }
           >
             Portfolio
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-list color-4">
-          <Link
+          <NavLink
             to="/resume"
             className={
               currentPage === "/resume" ? "nav-link active" : "nav-link"
             }
           >
             Resume
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </>

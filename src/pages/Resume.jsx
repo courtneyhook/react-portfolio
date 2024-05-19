@@ -1,7 +1,6 @@
 export default function Resume() {
   return (
-    <>
-      <h1>Resume</h1>
+    <div className="content">
       <h3>Front-End Proficiencies</h3>
       <ul>
         <li>HTML</li>
@@ -24,6 +23,6 @@ export default function Resume() {
         <li>MERN</li>
         <li>GraphQL</li>
       </ul>
-    </>
+    </div>
   );
 }

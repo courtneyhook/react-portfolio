@@ -4,14 +4,13 @@ import projects from "../components/projects";
 export default function Portfolio() {
   return (
     <>
-      <h1>Portfolio</h1>
-      <ul>
+      <div className="nav-list2">
         {projects.map((project) => (
-          <li key={projects.id}>
+          <div className="project-item" key={projects.id}>
             <img
               src={project.img}
               alt={`screenshot of ${project.name} website`}
-              width="300"
+              width="500"
             />
             <br />
             {`${project.name}`}
@@ -19,9 +18,9 @@ export default function Portfolio() {
             <Link to={project.github}>Github Repository</Link>
             <br />
             <Link to={project.url}>Visit this site!</Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 }

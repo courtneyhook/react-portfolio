@@ -1,7 +1,7 @@
 #root {
   margin: 0 auto;
   background-color: #c0c0c0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header {
@@ -28,6 +28,20 @@
   display: inline-block;
   padding: 15px;
   font-size: 2rem;
+}
+
+.nav-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 2;
+  list-style: none;
+  margin: 15px;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+.project-item {
+  margin: 20px;
 }
 
 .color-1 {
