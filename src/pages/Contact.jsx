@@ -31,17 +31,23 @@ const Contact = () => {
             <label htmlFor="userName" className="form-label">
               Name:
             </label>
-            <input name="userName" type="text" />
+            <input name="userName" type="text" required="true" />
           </div>
           <br />
           <div>
             <label htmlFor="email">Email:</label>
-            <input name="email" type="text" />
+            <input name="email" type="text" required="true" />
           </div>
           <br />
           <div>
             <label htmlFor="message">Message:</label>
-            <textarea name="message" type="text" rows={10} cols={40} />
+            <textarea
+              name="message"
+              type="text"
+              required="true"
+              rows={10}
+              cols={40}
+            />
           </div>
           <button type="submit">Submit</button>
         </form>
