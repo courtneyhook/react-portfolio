@@ -1,49 +1,43 @@
-import { useState } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
-function Contact() {
-  const [userName, setuserName] = useState(" ");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const Contact = () => {
+  const form = useRef();
 
-  const handleFormSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    setuserName(" ");
-    setEmail(" ");
-    setMessage(" ");
-    console.log("submitted");
-    console.log(userName);
-    console.log(email);
-    console.log(message);
+
+    emailjs
+      .sendForm("contact_service", "template_8d6julb", form.current, {
+        publicKey: "QNlqMAjlTUR9tPvkn",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
     <>
       <h3>Contact Me</h3>
-      <form onSubmit={handleFormSubmit}>
+      <form ref={form} onSubmit={sendEmail}>
         <label htmlFor="userName">Name:</label>
-        <input
-          name="userName"
-          type="text"
-          onChange={(e) => setuserName(e.target.value)}
-        />
+        <input name="userName" type="text" />
+        <br />
         <label htmlFor="email">Email:</label>
-        <input
-          name="email"
-          type="text"
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <input name="email" type="text" />
+        <br />
         <label htmlFor="message">Message:</label>
-        <textarea
-          name="message"
-          type="text"
-          rows={10}
-          cols={40}
-          onChange={(e) => setMessage(e.target.value)}
-        />
+        <textarea name="message" type="text" rows={10} cols={40} />
         <button type="submit">Submit</button>
       </form>
     </>
   );
-}
+};
 
 export default Contact;
