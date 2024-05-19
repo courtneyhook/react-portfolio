@@ -6,7 +6,7 @@ import linkedin from "../assets/linkedin.png";
 
 export default function Footer() {
   return (
-    <>
+    <div className="footer">
       <hr />
       <Link to="https://github.com/courtneyhook">
         <img src={github} alt="" width="30" />
@@ -17,6 +17,6 @@ export default function Footer() {
       <Link to="https://www.linkedin.com/in/courtney-hook-755ba330a/">
         <img src={linkedin} alt="" width="30" />
       </Link>
-    </>
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 function AboutMe() {
   return (
-    <>
+    <div className="content">
       <h1>About Me</h1>
       <p>
         My name is Courtney Hook. I am a third grade teacher at Mountain Grove
@@ -20,7 +20,7 @@ function AboutMe() {
         the school experience. I have been a dedicated professional for many
         years and I have seen the needs in classrooms and home learning.
       </p>
-    </>
+    </div>
   );
 }
 
