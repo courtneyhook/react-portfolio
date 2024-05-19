@@ -1,7 +1,10 @@
+import profile from "../assets/profileavatar.jpg";
+
 function AboutMe() {
   return (
     <div className="content">
       <h1>About Me</h1>
+      <img src={profile} />
       <p>
         My name is Courtney Hook. I am a third grade teacher at Mountain Grove
         Elementary School. I have been teaching for 15 years. I am married with

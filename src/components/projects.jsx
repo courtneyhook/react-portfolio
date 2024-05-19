@@ -3,6 +3,7 @@ import notetaker from "../assets/notetaker.png";
 import weatheroutlook from "../assets/weatheroutlook.png";
 import technicallyspeaking from "../assets/technicallyspeaking.png";
 import tracknheal from "../assets/tracknheal.png";
+import codingquiz from "../assets/codingquiz.png";
 
 const projects = [
   {
@@ -39,6 +40,13 @@ const projects = [
     img: tracknheal,
     url: "https://tracknheal-be5b35216eb1.herokuapp.com/",
     github: "https://github.com/prismhead26/Patient-Portal-App-Team-Colab",
+  },
+  {
+    id: 6,
+    name: "Coding Quiz",
+    img: codingquiz,
+    url: "https://courtneyhook.github.io/coding-quiz-challenge/",
+    github: "https://github.com/courtneyhook/coding-quiz-challenge",
   },
 ];
 
